@@ -1,6 +1,6 @@
 # hash tables
 
-# h1
+# H1
 ## H2
 ### H3
 
