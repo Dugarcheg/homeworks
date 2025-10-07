@@ -1,5 +1,7 @@
-import '../lib/hastables.dart' as hastables;
+import 'package:hastables/linear_search.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${hastables.calculate()}!');
+void main() {
+  final myList = [42, 3, 10, 7, 28, 149, 0, 3, 25, 7, 1];
+  final foundIndex = linearSearch(myList, 28);
+  print(foundIndex);
 }
