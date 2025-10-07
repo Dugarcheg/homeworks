@@ -9,6 +9,6 @@ void main() {
   myList.sort();
   print(myList);
 
-  foundIndex = binarySearch(myList, 1);
+  foundIndex = binarySearch(myList, 149);
   print(foundIndex);
 }
