@@ -1,4 +1,4 @@
-import 'package:hastables/hastables.dart';
+import '../lib/hastables.dart';
 import 'package:test/test.dart';
 
 void main() {
