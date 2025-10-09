@@ -14,11 +14,11 @@ class Student{
 }
 
 class HashTable {
-  final _bucket = List<Student?>.filled(100, null);
+  final _bucket = List<List<Student?>>.generate(100, (_) => []);
 
   void insert(Student student) {
     final index = _hash(student.id);
-    _bucket[index] = student;
+    _bucket[index].add(student);
   }
 
   int _hash(int studentId){
@@ -27,6 +27,12 @@ class HashTable {
 
   Student? getStudent(int studentId){
     final index = _hash(studentId);
-    return _bucket[index];
+    final studentsAtIndex = _bucket[index];
+    for (final student in studentsAtIndex){
+      if (student.id == studentId){
+        return student;
+      }
+    }
+    return null;
   }
 }
