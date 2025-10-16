@@ -5,14 +5,36 @@ class Bunny {
   Bunny({required this.name, required this.babies});
 }
 
-void printBunnyName(Bunny bunny){
+void printBunnyNamesRecursive(Bunny bunny){
   print(bunny.name);
   if (bunny.babies.isEmpty){
     return;
   }
   for (final baby in bunny.babies){
-  printBunnyName(baby);
+  printBunnyNamesRecursive(baby);
 }
+}
+
+class Stacks<T> {
+  final _list = <T>[];
+
+  void push(T value) => _list.add(value);
+  T pop() => _list.removeLast();
+  bool get isEmpty => _list.isEmpty;
+}
+
+void printBunnyNamesWithStack(Bunny root) {
+  final stack = Stacks<Bunny>();
+  stack.push(root);
+
+  while (!stack.isEmpty) {
+    final current = stack.pop();
+    print(current.name);
+
+    for (var i = current.babies.length - 1; i >= 0; i--) {
+      stack.push(current.babies[i]);
+    }
+  }
 }
 
 final bunnyFamily = Bunny(name: 'Mommy', babies: [

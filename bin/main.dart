@@ -4,7 +4,11 @@ void main(){
   // oneToTenIteration();
   //oneToTenRecursion();
 
-  printBunnyName(bunnyFamily);
+  print('--- Recursive ---');
+  printBunnyNamesRecursive(bunnyFamily);
+
+  print('\n--- Using Stack ---');
+  printBunnyNamesWithStack(bunnyFamily);
 }
 
 void oneToTenRecursion([int current = 1]){
