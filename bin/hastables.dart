@@ -3,8 +3,8 @@ import 'package:hastables/hash_table.dart';
 import 'package:hastables/linear_search.dart';
 
 void main() {
-  final myList = [42, 3, 10, 7, 28, 149, 0, 3, 25, 7, 1];
-  var foundIndex = linearSearch(myList, 28);
+  final myList = [3, 7, 2, 6, 5, 1, 4, 9];
+  var foundIndex = linearSearch(myList, 6);
   print(foundIndex);
 
   myList.sort();
