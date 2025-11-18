@@ -6,6 +6,13 @@ class Heap {
     return _data[0];
   }
 
+  int? get top {
+    if (_data.isEmpty){
+      return null;
+    }
+    return _data[0];
+  }
+
   void insert(int value) {
     _data.add(value);
     int childIndex = _data.length - 1;
